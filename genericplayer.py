@@ -23,7 +23,7 @@ class GenericPlayer(ABC):
     def my_time(self):
         '''
         The time left on the Player's own clock in seconds.
-        Use `self.game.initial_time` to get original amount of time given to both players
+        Use `self.game.initial_time` to get the starting time given to players
         '''
         
         return self.game.white_time if self.color == chess.WHITE else self.game.black_time
@@ -33,7 +33,7 @@ class GenericPlayer(ABC):
     def opponent_time(self):
         '''
         The time left on the opposing Player's clock in seconds.
-        Use `self.game.initial_time` to get original amount of time given to both players
+        Use `self.game.initial_time` to get the starting time given to players
         '''
         
         return self.game.black_time if self.color == chess.WHITE else self.game.white_time

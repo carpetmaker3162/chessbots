@@ -123,7 +123,4 @@ class Game:
             event_loop.close()
         
         if self.export:
-            with open('end_fen.txt', 'w') as f:
-                f.write(self.board.fen())
-            
             self.export_pgn()
